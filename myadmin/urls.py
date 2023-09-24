@@ -19,5 +19,7 @@ from django.urls import path,include
 from myadmin import views
 
 urlpatterns = [
-    path('simple_response', views.simple_response, name='simple_response')
+    path('index', views.index, name='index'),
+    path('layout', views.layout, name='layout'),
+    
 ]
