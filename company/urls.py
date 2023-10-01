@@ -19,7 +19,8 @@ from django.urls import path,include
 from company import views
 
 urlpatterns = [
-    # path('index', views.index, name='index'),
+    path('index', views.index, name='index'),
     path('layout', views.layout, name='layout'),
+    path('contact', views.contact, name='contact'),
     
 ]
