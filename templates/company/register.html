@@ -1,0 +1,98 @@
+{% extends 'company/common/layout.html' %}
+
+{% block content %}
+
+<div class="bradcam_area breadcam_bg_2">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="bradcam_text text-center">
+                    <h3>REGISTER</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="whole-wrap">
+    <div class="container box_1170">
+
+        <div class="section-top-border">
+            <div class="row">
+                <div class="col-lg-8 col-md-8">
+                    <h3 class="mb-30">REGISTER FORM</h3>
+                    <form action="/company/store_register" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="mt-10">
+                            <input type="text" name="first_name" id="first_name" placeholder="First Name"
+                                onfocus="this.placeholder = ''" onblur="this.placeholder = 'First Name'" required
+                                class="single-input">
+                        </div>
+                        <div class="mt-10">
+                            <input type="text" name="last_name" id="last_name" placeholder="Last Name"
+                                onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last Name'" required
+                                class="single-input">
+                        </div>
+                        <div class="mt-10">
+                            <input type="email" name="EMAIL" id="EMAIL" placeholder="Email address"
+                                onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'" required
+                                class="single-input">
+                        </div>
+
+                        <div class="input-group-icon mt-10">
+                            <div class="icon"><i class="fa fa-plane" aria-hidden="true"></i></div>
+                            <div class="form-select" id="default-select"">
+                                        <select id="city" name="city">
+                                            <option value=" 1">City</option>
+                                <option value="dhaka">Dhaka</option>
+                                <option value="dilli">Dilli</option>
+                                <option value="newyork">Newyork</option>
+                                <option value="ayodhya">Ayodhya</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="input-group-icon mt-10">
+                            <div class="icon"><i class="fa fa-globe" aria-hidden="true"></i></div>
+                            <div class="form-select" id="default-select"">
+                                        <select id="country" name="country">
+                                            <option value=" 1">Country</option>
+                                <option value="1">Bangladesh</option>
+                                <option value="1">India</option>
+                                <option value="1">England</option>
+                                <option value="1">Srilanka</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mt-10">
+                            <input type="text" name="user_name" id="user_name" placeholder="User Name" onfocus="this.placeholder = ''"
+                                onblur="this.placeholder = 'User Name'" required class="single-input">
+                        </div>
+                        <div class="mt-10">
+                            <input type="password" id="password" name="password" placeholder="Password"
+                                onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'" required
+                                class="single-input">
+                        </div>
+                        <div class="mt-10">
+                            <input type="password" id="cpassword" name="cpassword" placeholder="Confirm Password"
+                                onfocus="this.placeholder = ''" onblur="this.placeholder = 'Confirm Password'" required
+                                class="single-input">
+                        </div>
+                        <p class="sample-text">
+                            <i>Upload Your Photo</i>
+                        </p>
+                        <div class="mt-10">
+                            <input type="file" id="photo" name="photo" placeholder="Photo"
+                                onfocus="this.placeholder = ''" onblur="this.placeholder = 'Photo'" required
+                                class="single-input">
+                        </div>
+                        <!-- For Gradient Border Use -->
+                        <div class="button-group-area mt-10">
+                            <button type="submit" class="genric-btn primary-border e-large">Register</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
